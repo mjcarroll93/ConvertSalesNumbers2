@@ -3,13 +3,12 @@ package io.michaelcarroll;
 import io.michaelcarroll.Rules.SpecialCases;
 import io.michaelcarroll.Rules.ValueIsOne;
 import io.michaelcarroll.Rules.ValueIsZero;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class ConvertSalesDigitsToEnglishWithCurrency {
 
-    List<SpecialCases> specialCasesList;
+    private List<SpecialCases> specialCasesList;
     private String currency = "Dollars";
 
     public ConvertSalesDigitsToEnglishWithCurrency() {
@@ -31,7 +30,7 @@ public class ConvertSalesDigitsToEnglishWithCurrency {
             }
         }
         /*
-        If there are no special cases then run the converter util to convert all other positive integer cases below one billion
+        If there are no special cases then run the converter Util to convert all other positive integer cases below one billion
          */
         return SalesStringConverterUtil.runConverterUtil(parsedSalesString) + currency;
     }

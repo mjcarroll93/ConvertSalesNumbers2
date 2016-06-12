@@ -14,7 +14,7 @@ public class ConvertSalesNumbersToCurrencyTest {
     }
 
     @Test
-    public void convertSalesNumbersToStringPassingString18() throws Exception {
+    public void convertSalesNumbersToStringPassingStringEighteen() throws Exception {
         String expectedValue = "EighteenDollars";
         String actualValue = convertSalesNumbersToCurrency.addSalesCurrencyAfterConverterUtilIsRan("18");
         assertEquals(expectedValue, actualValue);
@@ -22,7 +22,7 @@ public class ConvertSalesNumbersToCurrencyTest {
     }
 
     @Test
-    public void convertSalesNumbersToStringPassingString155() throws Exception {
+    public void convertSalesNumbersToStringPassingStringOneHundredFiftyFive() throws Exception {
         String expectedValue = "OneHundredFiftyFiveDollars";
         String actualValue = convertSalesNumbersToCurrency.addSalesCurrencyAfterConverterUtilIsRan("155");
         assertEquals(expectedValue, actualValue);
@@ -30,19 +30,25 @@ public class ConvertSalesNumbersToCurrencyTest {
     }
 
     @Test
-    public void convertSalesNumbersToStringPassingString1000000() throws Exception {
+    public void convertSalesNumbersToStringPassingStringOneMillion() throws Exception {
         String expectedValue = "OneMillionDollars";
         String actualValue = convertSalesNumbersToCurrency.addSalesCurrencyAfterConverterUtilIsRan("1000000");
         assertEquals(expectedValue, actualValue);
     }
 
     @Test
-    public void convertSalesNumbersToStringPassingString999999() throws Exception {
+    public void convertSalesNumbersToStringPassingStringNineHundredNinetyNineThousandNineHundredNinetyNine() throws Exception {
         String expectedValue = "NineHundredNinetyNineThousandNineHundredNinetyNineDollars";
         String actualValue = convertSalesNumbersToCurrency.addSalesCurrencyAfterConverterUtilIsRan("999999");
         assertEquals(expectedValue, actualValue);
     }
 
+    @Test
+    public void runDigitToEnglishWordSalesConverterWithValidNineHundredNinetyNineMillionNineHundredNinetyNineThousandNineHundredNinetyNineInput() throws Exception {
+        String expectedValue = "NineHundredNinetyNineMillionNineHundredNinetyNineThousandNineHundredNinetyNineDollars";
+        String actualValue = convertSalesNumbersToCurrency.addSalesCurrencyAfterConverterUtilIsRan("999999999");
+        assertEquals(expectedValue, actualValue);
+    }
     @Test
     public void convertSalesNumbersToStringPassingStringZero() throws Exception {
         String expectedValue = "ZeroDollars";

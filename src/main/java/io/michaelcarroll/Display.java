@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Display {
 
-    static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void printMessage(String msg)
     {

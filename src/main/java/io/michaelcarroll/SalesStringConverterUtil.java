@@ -11,14 +11,14 @@ public class SalesStringConverterUtil {
             "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
     private static String[] tensPlaces = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
 
-    static List<Rules> conversionRules;
+    private static List<Rules> conversionRules;
 
     public static String runConverterUtil(int parsedSalesString) {
         String salesMadeConvertedToWords = "";
         conversionRules = new ArrayList<>();
-        conversionRules.add(new ValueIsInHundredsRangeRule());
         conversionRules.add(new ValueIsBelowTwentyRule());
         conversionRules.add(new ValueIsAboveNineteenAndBelowOneHundredRule());
+        conversionRules.add(new ValueIsInHundredsRangeRule());
         conversionRules.add(new ValueIsInThousandsRange());
         conversionRules.add(new ValueIsInMillionsRange());
         for (Rules rule : conversionRules) {

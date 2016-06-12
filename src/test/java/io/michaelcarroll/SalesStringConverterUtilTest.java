@@ -9,9 +9,9 @@ public class SalesStringConverterUtilTest {
 
 
     @Test
-    public void convertBelowTwentyPassingArgumentEighteen() throws Exception {
-        String expectedValue = "Eighteen";
-        String actualValue = SalesStringConverterUtil.convertBelowTwenty(18);
+    public void convertBelowTwentyPassingArgumentNineteen() throws Exception {
+        String expectedValue = "Nineteen";
+        String actualValue = SalesStringConverterUtil.convertBelowTwenty(19);
         assertEquals(expectedValue, actualValue);
     }
 
@@ -37,16 +37,16 @@ public class SalesStringConverterUtilTest {
     }
 
     @Test
-    public void convertInHundredsRangePassingArgumentOneHundredTwentyTwo() throws Exception {
-        String expectedValue = "OneHundredTwentyTwo";
-        String actualValue = SalesStringConverterUtil.convertInHundredsRange(122);
+    public void convertInHundredsRangePassingArgumentOneHundred() throws Exception {
+        String expectedValue = "OneHundred";
+        String actualValue = SalesStringConverterUtil.convertInHundredsRange(100);
         assertEquals(expectedValue, actualValue);
     }
 
     @Test
-    public void convertInHundredsRangePassingArgumentOneHundred() throws Exception {
-        String expectedValue = "OneHundred";
-        String actualValue = SalesStringConverterUtil.convertInHundredsRange(100);
+    public void convertInHundredsRangePassingArgumentOneHundredTwentyTwo() throws Exception {
+        String expectedValue = "OneHundredTwentyTwo";
+        String actualValue = SalesStringConverterUtil.convertInHundredsRange(122);
         assertEquals(expectedValue, actualValue);
     }
 
@@ -72,6 +72,20 @@ public class SalesStringConverterUtilTest {
     }
 
     @Test
+    public void convertInThousandsRangePassingArgumentOneThousandNineteen() throws Exception {
+        String expectedValue = "OneThousandNineteen";
+        String actualValue = SalesStringConverterUtil.convertInThousandsRange(1019);
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    public void convertInThousandsRangePassingArgumentOneThousandTwenty() throws Exception {
+        String expectedValue = "OneThousandTwenty";
+        String actualValue = SalesStringConverterUtil.convertInThousandsRange(1020);
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
     public void convertInThousandsRangePassingArgumentOneThousandFiveHundredFiftyFive() throws Exception {
         String expectedValue = "OneThousandFiveHundredFiftyFive";
         String actualValue = SalesStringConverterUtil.convertInThousandsRange(1555);
@@ -86,11 +100,19 @@ public class SalesStringConverterUtilTest {
     }
 
     @Test
-    public void convertInThousandsRangePassingArgument55345() throws Exception {
+    public void convertInThousandsRangePassingArgumentFiftyFiveThousandThreeHundredFortyFive() throws Exception {
         String expectedValue = "FiftyFiveThousandThreeHundredFortyFive";
         String actualValue = SalesStringConverterUtil.convertInThousandsRange(55345);
         assertEquals(expectedValue, actualValue);
     }
+
+    @Test
+    public void convertInThousandsRangePassingArgumentNinetyNineThousandNineHundredNinetyNine() throws Exception {
+        String expectedValue = "NinetyNineThousandNineHundredNinetyNine";
+        String actualValue = SalesStringConverterUtil.convertInThousandsRange(99999);
+        assertEquals(expectedValue, actualValue);
+    }
+
 
     @Test
     public void convertInThousandsRangePassingArgumentOneHundredThousand() throws Exception {
@@ -99,6 +121,12 @@ public class SalesStringConverterUtilTest {
         assertEquals(expectedValue, actualValue);
     }
 
+    @Test
+    public void convertInThousandsRangePassingArgumentOneHundredElevenThousandOneHundredEleven() throws Exception {
+        String expectedValue = "OneHundredElevenThousandOneHundredEleven";
+        String actualValue = SalesStringConverterUtil.convertInThousandsRange(111111);
+        assertEquals(expectedValue, actualValue);
+    }
     @Test
     public void convertInThousandsRangePassingArgumentFiveHundredTwentyFiveThousandNineHundredNinetyNine() throws Exception {
         String expectedValue = "FiveHundredTwentyFiveThousandNineHundredNinetyNine";
@@ -145,6 +173,13 @@ public class SalesStringConverterUtilTest {
     public void convertInMillionsRangPassingArgumentOneHundredMillion() throws Exception {
         String expectedValue = "OneHundredMillion";
         String actualValue = SalesStringConverterUtil.convertInMillionRange(100000000);
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    public void convertInMillionsRangPassingArgumentOneHundredElevenMillionOneHundredElevenThousandOneHundredEleven() throws Exception {
+        String expectedValue = "OneHundredElevenMillionOneHundredElevenThousandOneHundredEleven";
+        String actualValue = SalesStringConverterUtil.convertInMillionRange(111111111);
         assertEquals(expectedValue, actualValue);
     }
 
