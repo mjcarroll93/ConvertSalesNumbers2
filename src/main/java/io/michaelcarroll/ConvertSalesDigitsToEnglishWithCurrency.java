@@ -23,7 +23,7 @@ public class ConvertSalesDigitsToEnglishWithCurrency {
         int parsedSalesString = Integer.parseInt(originalSalesStringAsDigits);
         /*
         Handle cases for input being either Zero or One and return ZeroDollars or OneDollar immediately.  To change currency
-        navigate to The Rules package and then to ValueIsOne or ValueIsZero
+        navigate to The Rules package and then to the class ValueIsOne or ValueIsZero
         */
         for (SpecialCases rule : specialCasesList) {
             if (rule.condition(parsedSalesString)) {
