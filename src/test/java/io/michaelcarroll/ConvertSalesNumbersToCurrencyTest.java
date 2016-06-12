@@ -43,4 +43,18 @@ public class ConvertSalesNumbersToCurrencyTest {
         assertEquals(expectedValue, actualValue);
     }
 
+    @Test
+    public void convertSalesNumbersToStringPassingStringZero() throws Exception {
+        String expectedValue = "ZeroDollars";
+        String actualValue = convertSalesNumbersToCurrency.addSalesCurrencyAfterConverterUtilIsRan("0");
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    public void convertSalesNumbersToStringPassingStringOne() throws Exception {
+        String expectedValue = "OneDollar";
+        String actualValue = convertSalesNumbersToCurrency.addSalesCurrencyAfterConverterUtilIsRan("1");
+        assertEquals(expectedValue, actualValue);
+    }
+
 }

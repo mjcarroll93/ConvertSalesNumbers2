@@ -51,11 +51,12 @@ public class SalesStringConverterUtil {
         return belowTwenty[hundredsPosition] + "Hundred" + runConverterUtil(parsedSalesString - hundredsPosition * 100);
     }
 
+    public static String convertAboveNineteenAndBelowTwenty(int parsedSalesString) {
+        return tensPlaces[parsedSalesString / 10] + belowTwenty[parsedSalesString % 10];
+    }
+
     public static String convertBelowTwenty(int parsedSalesString) {
         return belowTwenty[parsedSalesString];
     }
 
-    public static String convertAboveNineteenAndBelowTwenty(int parsedSalesString) {
-        return tensPlaces[parsedSalesString / 10] + belowTwenty[parsedSalesString % 10];
-    }
 }
